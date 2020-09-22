@@ -1,0 +1,13 @@
+#!/bin/sh
+
+NPP=/opt/npp/notepad++
+
+if [ -z "$1" ]; then
+  "$NPP" -openFoldersAsWorkspace . >/dev/null 2>&1 &
+  exit 0
+fi
+
+FILE="$(cygpath -w "$1")"
+
+"$NPP" "$FILE"
+

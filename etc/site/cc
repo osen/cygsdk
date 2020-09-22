@@ -1,0 +1,5 @@
+#!/bin/sh
+
+#exec x86_64-w64-mingw32-clang "$@"
+exec x86_64-w64-mingw32-gcc "$@"
+
