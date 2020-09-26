@@ -1,4 +1,4 @@
 @echo off
 
-cd %~dp0bin
+cd /D "%~dp0bin"
 start .\mintty -

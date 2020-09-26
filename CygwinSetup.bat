@@ -7,17 +7,17 @@ set MINGW64=mingw64-x86_64-gcc-g++,mingw64-x86_64-SDL2,mingw64-x86_64-openal,min
 etc\site\setup-x86_64 ^
   --no-admin ^
   --site %SITE% ^
-  --local-package-dir %~dp0tmp\packages ^
+  --local-package-dir "%~dp0tmp\packages" ^
   --only-site ^
   --no-verify ^
-  --root %~dp0 ^
+  --root "%~dp0." ^
   --quiet-mode ^
   --verbose ^
   --no-shortcuts ^
   --packages %PACKAGES%,%MINGW64% ^
   --package-manager
 
-set PATH=%~dp0bin;%PATH%
+set PATH="%~dp0bin";%PATH%
 sh etc\site\postinstall.sh
 
 pause
